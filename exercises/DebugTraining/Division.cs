@@ -21,8 +21,13 @@ namespace DebugExample
                     Console.WriteLine("numbers only!");
                     continue;
                 }
+                if (denominator == 0)
+                {
+                    Console.WriteLine("The denominator cannot be zero!");
+                    continue;
+                }
 
-                int quotient = numerator / denominator;
+                float quotient = numerator / (float)denominator;
 
                 Console.WriteLine($"The quotient of {numerator} and {denominator} is: {quotient}");
                 break; // if we reach this code, the user has not entered anything wrong and we can end this method.
